@@ -55,7 +55,11 @@ export default function Application() {
     if (windowsUtils.origin) {
       const url = `${windowsUtils.origin}/metadata/client`
       getInfo(url).then(jsonConfig => {
+        // eslint-disable-next-line no-console
+        console.log('jsonConfig', jsonConfig)
         const response = getConfig(jsonConfig)
+        // eslint-disable-next-line no-console
+        console.log('response', response)
         dispatchInitializr({ type: 'COMPLETE', payload: { ...response } })
         dispatch({ type: 'COMPLETE', payload: response })
       })

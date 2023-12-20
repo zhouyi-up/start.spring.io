@@ -29,6 +29,8 @@ export const defaultInitializrContext = {
 export function reducer(state, action) {
   switch (action.type) {
     case 'COMPLETE': {
+      // eslint-disable-next-line no-console
+      console.log('reducer', state, action)
       const json = get(action, 'payload')
       const defaultValues = {
         ...get(json, 'defaultValues'),

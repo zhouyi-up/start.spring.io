@@ -23,6 +23,7 @@
 
 	<modules>
 		<module>start-client</module>
+		<module>start-client-vue</module>
 		<module>start-site</module>
 	</modules>
 
